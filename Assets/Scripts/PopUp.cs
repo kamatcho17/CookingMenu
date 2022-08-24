@@ -16,7 +16,11 @@ public class PopUp : MonoBehaviour
     {
         comandPannel.SetActive(true);
 
+        // To Show FoodTitle
         comandPannel.transform.Find("FoodTitle").GetComponent<Text>().text = FoodTitle;
+
+        // To Send FoodTitle to server
+        comandPannel.transform.Find("Order").GetComponent<Order>().foodTitle = FoodTitle;
 
         this.GetComponentInParent<ScrollRect>().enabled = false;
     }
